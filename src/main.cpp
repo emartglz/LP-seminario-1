@@ -1,6 +1,10 @@
 #include <iostream>
 #include <cstdio>
 #include "../include/linked_list.h"
+// #include "../include/node.h"
+
+
+typedef linked_list<int> ll_int;
 
 //esto lo estoy usando para testear cosas durante la implementacion
 struct A {
@@ -43,11 +47,14 @@ struct A {
 
 int main()
 {   
-    linked_list<int> l;
+    // node<int> a = node<int>(5);
+    // std::cout << a.value << std::endl;
+    ll_int l;
     std::cout << l.Length() << std::endl;
     l.add_last(0);
+    l.at(0) = 6;
     std::cout << l.Length() << std::endl;
-    std::cout << l.at(0) << std::endl;
+    std::cout << l[0] << std::endl;
 
     for(int i = 1; i < 10; i++)
     {
@@ -55,7 +62,7 @@ int main()
     }
     std::cout << l.Length() << std::endl;
 
-    linked_list<int> l2 = l(0, 4);
+    ll_int l2 = l(0, 4);
     l2[3] = 5;
     std::cout << l2[3] << std::endl;
     return 0;

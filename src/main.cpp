@@ -53,8 +53,14 @@ int main()
     std::cout << l.Length() << std::endl;
     l.add_last(0);
     l.at(0) = 6;
+    ll_int l1(l);
     std::cout << l.Length() << std::endl;
     std::cout << l[0] << std::endl;
+
+    std::cout << "Lista copia:  ";
+    std::cout << l1.Length() <<"  ";
+    std::cout << l1[0] << std::endl;
+
 
     for(int i = 1; i < 10; i++)
     {

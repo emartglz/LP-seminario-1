@@ -3,10 +3,10 @@
 2: done
     a theoric
     b theoric
-    c 
-3: 
-    a
-    b
+    c done
+3: done
+    a theoric
+    b theoric
     c
     d
     e
@@ -16,16 +16,16 @@
     a
 5: done
     a theoric
-    b theoric
-    c
+    b 
+    c 
 6: done
-    a
+    a 
     b
     c
     d theoric
     e theoric
 7: done
-    a 
+    a done
     b
     c done
     d theoric

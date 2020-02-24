@@ -47,21 +47,6 @@ struct A {
 };
 
 
-class B{
-    int a;
-    int b;
-    public:
-    explicit B(int x){
-        a = x;
-        b = x *10;
-    }
-    int get(){return b;}
-
-};
-
-void f(B b){
-    cout<<b.get()<<endl;
-}
 
 int main()
 {   
@@ -75,19 +60,10 @@ int main()
     std::cout << l.Length() << std::endl;
     std::cout << l[0] << std::endl;
 
+    vector<int> v = {1,2,3};
+    ll_int l3(v);
 
 
-    for(int i = 1; i < 10; i++)
-    {
-        l.add_last(i);
-    }
-    std::cout << l.Length() << std::endl;
-
-    ll_int l2 = l(0, 4);
-    l2[3] = 5;
-    std::cout << l2[3] << std::endl;
-
-    f( (B)10);
 
     return 0;
 }

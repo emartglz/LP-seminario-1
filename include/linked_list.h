@@ -2,6 +2,7 @@
 #define LINKED_LIST_H
 
 #include "node.h"
+#include <vector>
 
 template <typename T>
 class linked_list
@@ -22,6 +23,7 @@ class linked_list
         linked_list();
         linked_list(const linked_list<T> * );
         ~linked_list();
+        linked_list(std::vector<T>);
         linked_list<T> operator()(int start, int count);
         void operator=(linked_list<T>);
 };
@@ -33,6 +35,20 @@ linked_list<T>::linked_list()
     this->first = n;
     this->last = n;
     this->length = 0;
+}
+
+template <typename T>
+linked_list<T>::linked_list(std::vector<T> v)
+{
+    node<T> *n = new node<T>;
+    this->first = n;
+    this->last = n;
+    this->length = 0;
+
+    typename std::vector<T>::iterator it;
+    for(it = v.begin(); it != v.end(); it++){
+        this->add_last(*it);
+    }
 }
 
 template<typename T>

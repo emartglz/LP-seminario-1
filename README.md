@@ -7,13 +7,13 @@
 3: done
     a theoric
     b theoric
-    c
-    d
-    e
-    f
-    g
+    c theoric
+    d theoric
+    e theoric
+    f theoric
+    g theoric
 4:
-    a
+    a done
 5: done
     a theoric
     b 

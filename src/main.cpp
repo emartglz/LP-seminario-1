@@ -1,9 +1,10 @@
 #include <iostream>
 #include <cstdio>
+#include <vector>
 #include "../include/linked_list.h"
 // #include "../include/node.h"
 
-
+using namespace std;
 typedef linked_list<int> ll_int;
 
 //esto lo estoy usando para testear cosas durante la implementacion
@@ -45,6 +46,23 @@ struct A {
     }
 };
 
+
+class B{
+    int a;
+    int b;
+    public:
+    explicit B(int x){
+        a = x;
+        b = x *10;
+    }
+    int get(){return b;}
+
+};
+
+void f(B b){
+    cout<<b.get()<<endl;
+}
+
 int main()
 {   
     // node<int> a = node<int>(5);
@@ -57,9 +75,6 @@ int main()
     std::cout << l.Length() << std::endl;
     std::cout << l[0] << std::endl;
 
-    std::cout << "Lista copia:  ";
-    std::cout << l1.Length() <<"  ";
-    std::cout << l1[0] << std::endl;
 
 
     for(int i = 1; i < 10; i++)
@@ -71,5 +86,8 @@ int main()
     ll_int l2 = l(0, 4);
     l2[3] = 5;
     std::cout << l2[3] << std::endl;
+
+    f( (B)10);
+
     return 0;
 }

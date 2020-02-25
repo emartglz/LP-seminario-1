@@ -7,31 +7,31 @@
 3: done
     a theoric
     b theoric
-    c
-    d
-    e
-    f
-    g
+    c theoric
+    d theoric
+    e theoric
+    f theoric
+    g theoric
 4:
-    a
+    a done
 5: done
     a theoric
-    b 
-    c 
+    b theoric
+    c theoric
 6: done
-    a 
-    b
-    c
+    a theoric
+    b theoric
+    c theoric
     d theoric
     e theoric
 7: done
     a done
-    b
+    b theoric
     c done
     d theoric
-8: 
-    a
-    b
-    c
+8: done
+    a done
+    b done?
+    c theoric
 9:
     a

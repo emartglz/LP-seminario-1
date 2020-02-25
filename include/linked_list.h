@@ -4,6 +4,13 @@
 #include "node.h"
 #include <vector>
 
+template<typename T, typename R>
+struct function{
+    typedef R(*puntero)(T);
+};
+
+
+
 template <typename T>
 class linked_list
 {
@@ -26,6 +33,18 @@ class linked_list
         linked_list(std::vector<T>);
         linked_list<T> operator()(int start, int count);
         void operator=(linked_list<T>);
+        template<typename R>
+        linked_list<R> map(R(*function)(T)){
+            linked_list<R> * n = new linked_list<R>();
+            
+            node<T> * curr = this->first;
+            for(int i=0;i<this->length;++i){
+                n->add_last( function(curr->value) );
+                curr = curr->next;
+            }
+            return n;
+        }           
+        
 };
 
 template <typename T>
@@ -191,5 +210,7 @@ linked_list<T> linked_list<T>::operator()(int start, int count)
 
     return ret;
 }
+
+
 
 #endif //LINKED_LIST_H

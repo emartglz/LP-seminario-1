@@ -16,17 +16,17 @@
     a done
 5: done
     a theoric
-    b 
-    c 
+    b theoric
+    c theoric
 6: done
-    a 
-    b
-    c
+    a theoric
+    b theoric
+    c theoric
     d theoric
     e theoric
 7: done
     a done
-    b
+    b theoric
     c done
     d theoric
 8: 

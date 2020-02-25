@@ -29,9 +29,9 @@
     b theoric
     c done
     d theoric
-8: 
-    a
-    b
-    c
+8: done
+    a done
+    b done?
+    c theoric
 9:
     a

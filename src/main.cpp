@@ -100,12 +100,17 @@ int main()
     std::cout << l.Length() << std::endl;
     std::cout << l[0] << std::endl;*/
     
-    /*vector<int> v ={1,2,3,4,5,6};
+    vector<int> v ={1,2,3,4,5,6};
     linked_list<int> l(v);
     linked_list<string> l2 = l.map(Map);
-    for(int i=0; i< l2.Length();i++)
-        cout<<l2[i]<<endl;*/
     
+    cout<<l2;
+    
+    //cin>>l;
+    //cout<<l;
+    
+
+
     //f(5,"Hola",true);
 
     return 0;

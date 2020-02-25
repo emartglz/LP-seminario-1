@@ -4,9 +4,11 @@
 #include "node.h"
 #include <vector>
 
+using namespace std;
+
 template<typename T, typename R>
 struct function{
-    typedef R(*puntero)(T);
+    typedef R(*fun)(T);
 };
 
 
@@ -33,6 +35,10 @@ class linked_list
         linked_list(std::vector<T>);
         linked_list<T> operator()(int start, int count);
         void operator=(linked_list<T>);
+        template<typename X>
+        friend ostream& operator<<(ostream& os, const linked_list<X>& l);
+        template<typename X>
+        friend istream& operator>> (istream& is, linked_list<X>& l);
         template<typename R>
         linked_list<R> map(R(*function)(T)){
             linked_list<R> * n = new linked_list<R>();
@@ -211,6 +217,33 @@ linked_list<T> linked_list<T>::operator()(int start, int count)
     return ret;
 }
 
-
+template<typename X>
+ostream& operator<<(ostream& os, const linked_list<X>& l)
+{
+    node<X> * n = l.first;
+    for(int i=0;i<l.length;i++,n=n->next)
+        os<<n->value<<" \n"[i==(l.length-1)];
+    
+    return os;
+}
+template<typename X>
+istream& operator>> (istream& is, linked_list<X>& l){
+    l.delete_all();
+    
+    node<X> *n = new node<X>;
+    l.first = n;
+    l.last = n;
+    l.length = 0;
+    
+    int size;
+    is>>size;
+    X k;
+    
+    for(int i=0;i<size;i++){
+        is>>k;
+        l.add_last(k);
+    }
+    return is;
+}
 
 #endif //LINKED_LIST_H
